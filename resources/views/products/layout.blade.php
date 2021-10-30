@@ -9,8 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>ma page produits</h1>
-        <br>
+         <br>
         @yield('content')
     </div>
 

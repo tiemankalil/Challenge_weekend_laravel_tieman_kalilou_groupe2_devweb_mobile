@@ -39,14 +39,14 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //validate the input
-            $request->validate([
-                'name' => 'required',
-                'detail'=> 'required'
-            ]);
+            // $request->validate([
+            //     'name' => 'required',
+            //     'detail'=> 'required'
+            // ]);
         // create a new product in a database
             Product::create( $request->all());
         // redirect the user and send friendly message 
-        return redirect()->route('products.index')->with('success','product create successfully');
+        return redirect()->route('products.index')->with('success','student create successfully');
         // 
     }
 
@@ -87,14 +87,14 @@ class ProductController extends Controller
     {
         
         //validate the input
-        $request->validate([
-            'name' => 'required',
-            'detail'=> 'required'
-        ]);
+        // $request->validate([
+        //     'name' => 'required',
+        //     'detail'=> 'required'
+        // ]);
     // create a new product in a database
         $product->update( $request->all());
     // redirect the user and send friendly message 
-    return redirect()->route('products.index')->with('success','product update successfully'); 
+    return redirect()->route('products.index')->with('success','student update successfully'); 
         //
     }
 
@@ -111,7 +111,7 @@ class ProductController extends Controller
         $product->delete();
 
         // redirect the user and display success message
-        return redirect()->route('products.index')->with('success','product deleted successfully'); 
+        return redirect()->route('products.index')->with('success','student deleted successfully'); 
 
     }
 }

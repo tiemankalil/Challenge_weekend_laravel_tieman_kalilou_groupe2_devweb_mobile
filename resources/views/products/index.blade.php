@@ -5,11 +5,11 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="float-left">
-            <h2>laravel 8 CRUD Example</h2>
+            <h2>LISTE DES ETUDIANTS</h2>
             
         </div>
         <div class="float-right">
-            <a href="{{ route('products.create') }}" class="btn btn-success">Create New Product</a>
+            <a href="{{ route('products.create') }}" class="btn btn-success">NOUVEAU ETUDIANT</a>
 
         </div>
     </div>
@@ -26,8 +26,11 @@
 <table class="table table-bordered">
 <tr>
     <th>ID</th>
-    <th>Name</th>
-    <th>Details</th>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Age</th>
+    <th>Telephone</th>
+    <th>Email</th>
     <th width="280px">Action</th>
 
 
@@ -36,8 +39,11 @@
 
 <tr>
     <td>{{ $product->id }}</td>
-    <td>{{ $product->name }}</td>
-    <td>{{ $product->detail }}</td>
+    <td>{{ $product->nom }}</td>
+    <td>{{ $product->prenom }}</td>
+    <td>{{ $product->age }}</td>
+    <td>{{ $product->telephone }}</td>
+    <td>{{ $product->email }}</td>
     <td>
         <form action="{{ route('products.destroy',$product->id) }}" method="POST">
                 <a href="{{ route('products.show',$product->id) }}" class="btn btn-info">Show</a>
